@@ -37,7 +37,7 @@ class mywindow:
         self.win = Gtk.Window()
 
         # important for my i3 config. it gets set to fullscreen by that
-        self.win.set_role("Myoverview")
+        self.win.set_role("i3-overview")
         self.win.connect("delete-event", do_nothing)
         self.open = False
 
@@ -84,7 +84,7 @@ class mywindow:
             # every display gets his own label on the top
             disp_label.override_background_color(0, Gdk.RGBA(0.8,0,0,1))
             disp_label.override_color(0, Gdk.RGBA(1,1,1,1))
-            
+
             display_grid = Gtk.Grid() #every display gets its own grid, so we can present them tidely
             display_grid.override_background_color(0, Gdk.RGBA(0,0,0,1))
             spacer = Gtk.Label(label="Hah")
