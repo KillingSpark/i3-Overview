@@ -82,6 +82,7 @@ class mywindow:
                 continue
             
             # every display gets his own label on the top
+            disp_label = Gtk.Label(label=display["name"])
             disp_label.override_background_color(0, Gdk.RGBA(0.8,0,0,1))
             disp_label.override_color(0, Gdk.RGBA(1,1,1,1))
 
@@ -90,7 +91,6 @@ class mywindow:
             spacer = Gtk.Label(label="Hah")
             spacer.override_background_color(0, Gdk.RGBA(0,0,0,1)) # needed because grids dont support spacing 
             spacer.override_color(0, Gdk.RGBA(0,0,0,1))
-            disp_label = Gtk.Label(label=display["name"])
 
             row =  0
             if display_counter > num_displays / 2 - 1:
